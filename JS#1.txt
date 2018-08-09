@@ -1,0 +1,34 @@
+function Arr()
+	{
+		//начальный массив заполненный случайными числами от 1 до 100
+		var mas = [];
+		var temp;
+
+		//document.write("Начальный массив: ");
+
+		for (var i = 0; i < 10; i++)
+		{
+			temp = Number(Math.round(-10 + (Math.random() * 50))); 	//заполняем рандомом
+			mas[i] = temp;
+			document.write(" " + mas[i]);
+		}
+
+		document.write("<br> ------------------------------------<br>");
+
+		
+		//получение нового массива
+		//document.write("Новый массив: ");
+
+		// var dem = mas.slice();
+
+		for (var temp of mas)
+		{
+			var tmp = (Math.sqrt(temp).toFixed(0));
+
+			if (temp > 0 && (Math.sqrt(temp) == tmp))
+			{
+					document.write(" " + tmp);
+			}
+		}
+	}
+	Arr();
